@@ -3,11 +3,11 @@
 
 Файлы проекта
    <pre>
-     Demo.BabylonJSRTS.Export.xml
-     Demo.BabylonJSRTS.game.xml
-     Demo.BabylonJSRTS.js.RtsCamera.xml
-     Demo.BabylonJSRTS.js.babylon.xml
-     HTML.CacheLib.xml 
+     Demo.BabylonJSRTS.Export.xml - класс эеспорта проекта
+     Demo.BabylonJSRTS.game.xml   - страница примера
+     Demo.BabylonJSRTS.js.RtsCamera.xml - Библиотека перемещения камеры RTS
+     Demo.BabylonJSRTS.js.babylon.xml   - Библиотека BabylonJS
+     HTML.CacheLib.xml - Библиотека для взоимодействия Cache` с JS кодом                
    </pre>
 
 <h4>Дополнительные библиотеки</h4>
