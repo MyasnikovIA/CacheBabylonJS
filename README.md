@@ -13,19 +13,19 @@
 <h4>Дополнительные библиотеки</h4>
 в проекте не используются, но для разработки могут пригодится
 <pre>
-    <h5>BootStrap</h5>
+    <h3>BootStrap</h3>
     HTML.css.bootstrap.v400.bootstrap.min.xml 
     HTML.css.bootstrap.v400.bootstrap.xml
     HTML.js.bootstrap.v400.bootstrap.min.xml
 </pre>
 <pre>
-     <h5>jQuery</h5>
+     <h3>jQuery</h3>
      HTML.css.jquery.v112.jQueryUI.xml
      HTML.js.jquery.v112.jQuery.xml  
      HTML.js.jquery.v112.jQueryUI.xml
 </pre>     
 <pre>
-     <h5>VueJS</h5>
+     <h3>VueJS</h3>
      HTML.js.vuejs.v216.VueJS.xml    
 </pre>
    
