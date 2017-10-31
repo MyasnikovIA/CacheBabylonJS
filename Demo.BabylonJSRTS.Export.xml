@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25" zv="Cache for Windows (x86-64) 2013.1.4 (Build 801)" ts="2017-10-31 08:37:00">
+<Class name="Demo.BabylonJSRTS.Export">
+<Super>%CSP.Page</Super>
+<TimeChanged>64587,30064.45761</TimeChanged>
+<TimeCreated>64587,29861.620731</TimeCreated>
+
+<Parameter name="FileName">
+<Expression>"BabylonJS_Games_RTS_Camera_("_$ZU(5)_")"</Expression>
+</Parameter>
+
+<Method name="ExportProject">
+<Description>
+d ##class(HTML.Export).ExportProject("")</Description>
+<ClassMethod>1</ClassMethod>
+<FormalSpec>path=""</FormalSpec>
+<Implementation><![CDATA[
+   s:path="" path="F:\XML\JS\LibJS ("_$replace($zd(+$h,4),"/",".")_").xml"
+   k all
+   s all("Demo.BabylonJSRTS.Export.cls")=""
+   s all("Demo.BabylonJSRTS.js.babylon.cls")=""
+   s all("Demo.BabylonJSRTS.js.RtsCamera.cls")=""
+   s all("Demo.BabylonJSRTS.game.cls")=""
+   s all("HTML.CacheLib.cls")=""
+   ; s NamePack="HTML."     
+   ; s ClassName="" 
+   ; s ind=0
+   ; For { 
+   ;    s ClassName=$o(^oddDEF(ClassName)) 
+   ;    q:ClassName="" 
+   ;    continue:$e(ClassName,1,$l(NamePack))'=NamePack
+   ;    s all(ClassName_".cls")=""
+   ; }
+   d $system.OBJ.Export(.all,path)
+   k all
+   w path,!
+   q
+]]></Implementation>
+</Method>
+
+<Method name="OnPage">
+<ClassMethod>1</ClassMethod>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	s dat="("_$replace($zd(+$h,4),"/",".")_").xml"
+    if ##class(%File).Exists(..#FileName_dat)=1   {
+           S stream=##class(%FileBinaryStream).%New()
+           S stream.Filename=..#FileName_dat
+           While 'stream.AtEnd  {
+                s readFrag=stream.Read(32000)
+                w readFrag
+           }
+           d stream.%Close()
+           d ##class(%File).Delete(..#FileName_dat)
+           ; Do $system.OBJ.Delete(##THIS,"c",.errorlog)
+	  Quit $$$OK
+    }
+    w "<pre>"
+     d ##class(Demo.BabylonJSRTS.Export).ExportProject(..#FileName_dat)
+     ; Do $system.OBJ.ExportAllClasses("D:\sirena\EcoClass.tx_","Sirena",.errorlog)
+     w "</pre>"
+     w "<script>",$c(13,10)
+     w "    window.location.href=window.location.toString();",$c(13,10)
+     w "    alert('Перезагрузите страницу');",$c(13,10)
+     w "</script>",$c(13,10)
+   
+	Quit $$$OK
+]]></Implementation>
+</Method>
+
+<Method name="OnPreHTTP">
+<ClassMethod>1</ClassMethod>
+<ReturnType>%Library.Boolean</ReturnType>
+<Implementation><![CDATA[
+	s dat="("_$replace($zd(+$h,4),"/",".")_").xml"
+    if ##class(%File).Exists(..#FileName_dat)=1   {
+      Do %response.SetHeader("Content-Type","application/octet-stream")   
+      Do %response.SetHeader("Content-Disposition: attachment; filename=",$p(..#FileName_dat,"/",$l(..#FileName_dat,"/"))) 
+    }else{
+      Do %response.SetHeader("Content-Type","text/html")   
+    }
+    q 1
+]]></Implementation>
+</Method>
+</Class>
+</Export>
