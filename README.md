@@ -11,22 +11,22 @@
    </pre>
 
 <h4>Дополнительные библиотеки</h4>
-в проекте неиспользуются, но для разработки могут пригодится
+в проекте не используются, но для разработки могут пригодится
 <pre>
-    BootStrap
+    <h5>BootStrap</h5>
     HTML.css.bootstrap.v400.bootstrap.min.xml 
     HTML.css.bootstrap.v400.bootstrap.xml
     HTML.js.bootstrap.v400.bootstrap.min.xml
 </pre>
 <pre>
-     jQuery
-     HTML.css.jquery.v112.jQueryUI.xml
+     <h5>jQuery</h5>
+     HTML.css.jquery.v112.jQueryUI.xml
      HTML.js.jquery.v112.jQuery.xml  
      HTML.js.jquery.v112.jQueryUI.xml
 </pre>     
 <pre>
-     VueJS
-     HTML.js.vuejs.v216.VueJS.xml    
+     <h5>VueJS</h5>
+     HTML.js.vuejs.v216.VueJS.xml    
 </pre>
    
    
