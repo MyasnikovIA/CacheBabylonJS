@@ -3,8 +3,8 @@
 
 Файлы проекта
    <pre>
-     Demo.BabylonJSRTS.Export.xml        - класс эеспорта проекта
-     Demo.BabylonJSRTS.game.xml          - страница примера
+     Demo.BabylonJSRTS.game.xml          - Страница примера     
+     Demo.BabylonJSRTS.Export.xml        - Класс экспорта проекта
      Demo.BabylonJSRTS.js.RtsCamera.xml  - Библиотека перемещения камеры RTS
      Demo.BabylonJSRTS.js.babylon.xml    - Библиотека BabylonJS
      HTML.CacheLib.xml                   - Библиотека для взоимодействия Cache` с JS кодом                
